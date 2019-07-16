@@ -17,3 +17,17 @@ it can work on any system/cluster supporting conventional message passing parall
 environments such as MPI (Message Passing Interface) and PVM (Parallel Virtual Machine).
 Since it is completely based on the original NEC code, the input files need not be changed
 and the output format remains the same too.
+
+
+This repository contains 3 files:
+nec2d.f is the FORTRAN code for the parallelized version of NEC. The names of NEC input
+and output files should be mentioned in files.ini. The file nec2dpar.inc contains information
+regarding the memory requirements of NEC. It has to be edited each time depending on the
+largest number of segments you expect your model to have. Furthermore, MAXSEG and
+MAXMAT should have same values.
+
+
+Reference:
+1. A. Rubinstein, F. Rachidi, M. Rubinstein, and B. Reusser, “A parallel version of NEC for
+the analysis of large structures,” IEEE Transactions on Electromagnetic Compatibility,
+vol. 45, no. 2, pp. 177–188, May 2003.
